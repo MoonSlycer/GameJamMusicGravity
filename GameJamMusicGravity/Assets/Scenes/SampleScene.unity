@@ -242,7 +242,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 303621501}
   - component: {fileID: 303621500}
   - component: {fileID: 303621505}
+  - component: {fileID: 303621506}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -692,6 +693,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee35374aba78498299cfa18f79913b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 150
+  rigidBody: {fileID: 303621500}
+--- !u!114 &303621506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303621499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d13bf985d224bc4a3fb2a74c46bd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravitySize: 80
@@ -1287,7 +1302,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

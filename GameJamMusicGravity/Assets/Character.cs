@@ -4,38 +4,42 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public float gravitySize = 9.81f;
+    public float movementSpeed = 1f;
+    public Rigidbody2D rigidBody;
+
     // Start is called before the first frame update
     void Awake()
     {
-        Physics2D.gravity = new Vector2(0f, 0f);
+       
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 CurrentDirection = Physics2D.gravity; //new Vector2(0f, 0f);
-        if(Input.GetKey(KeyCode.A))
+        // Get the input direction
+        Vector2 CurrentDirection = new Vector2(0f, 0f);
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
-            CurrentDirection = new Vector2(-gravitySize, 0f);
+            CurrentDirection = new Vector2(-1, 0f);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            CurrentDirection = new Vector2(1, 0f);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            CurrentDirection = new Vector2(0f, 1);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            CurrentDirection = new Vector2(0f, -1);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        // Apply it to movement
+        if (CurrentDirection != -Physics2D.gravity.normalized) // make sure we can't fly off of the ground
         {
-            CurrentDirection = new Vector2(gravitySize, 0f);
+            rigidBody.AddForce(CurrentDirection * movementSpeed);
         }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            CurrentDirection = new Vector2(0f, gravitySize);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            CurrentDirection = new Vector2(0f, -gravitySize);
-        }
-
-        Physics2D.gravity = CurrentDirection;
     }
-
 }
