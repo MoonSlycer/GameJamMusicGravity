@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
 
     void OnPlayPressed()
     {
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level0", LoadSceneMode.Single);
     }
 
     void OnQuitPressed()
