@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     private Vector3 onTouchCameraLoc;
-    public GameObject player;
+    private GameObject player;
     float zoomAnimationCurrentTime = 0;
     public float zoomAnimationDuration = .5f;
     public bool enteredBlackhole = false;
@@ -42,7 +42,9 @@ public class Goal : MonoBehaviour
 
                 float interpolationRatio = (float)(zoomAnimationCurrentTime / zoomAnimationDuration);
                 interpolationRatio = Mathf.Pow(interpolationRatio, 2);
+                Debug.Log(interpolationRatio);
                 m_MainCamera.transform.position = Vector3.Lerp(onTouchCameraLoc, gameObject.transform.position, interpolationRatio);
+                m_MainCamera.transform.position = new Vector3(m_MainCamera.transform.position.x, m_MainCamera.transform.position.y, -1); // ensure the camera doesn't clip through the objects (dont interpolate the z)
                 m_MainCamera.orthographicSize = Mathf.Lerp(onTouchCameraOrthographicSize, animationZoomAmt, interpolationRatio);
 
             }

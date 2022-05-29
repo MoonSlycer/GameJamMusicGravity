@@ -1323,7 +1323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcace490929c4a6e8d3eb70bc221052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  zoomAnimationDuration: 1
+  enteredBlackhole: 0
 --- !u!1001 &762238117
 PrefabInstance:
   m_ObjectHideFlags: 0
