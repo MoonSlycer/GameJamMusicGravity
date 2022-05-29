@@ -22,6 +22,6 @@ public class Instrument : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        audioSource.PlayOneShot(crashAudioClip);
+        audioSource.PlayOneShot(crashAudioClip, 0.1f);
     }
 }
