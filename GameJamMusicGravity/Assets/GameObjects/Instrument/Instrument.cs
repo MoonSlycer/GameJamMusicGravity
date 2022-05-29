@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Instrument : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    /** Instrument crashing sound effect */
+    public AudioClip crashAudioClip;
+
+    void Awake()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
