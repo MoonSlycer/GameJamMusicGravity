@@ -1325,6 +1325,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a411fb02ca4172b4c7fbefe1ed297, type: 3}
+--- !u!1001 &778558718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4918199689708396925, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_Name
+      value: SaxophoneInstrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981160278281923740, guid: 8e88f22d1aff2ee48b919ae3d3ec502c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e88f22d1aff2ee48b919ae3d3ec502c, type: 3}
 --- !u!850595691 &1198151573
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1695,7 +1766,7 @@ Transform:
   - {fileID: 669596036}
   - {fileID: 709498663}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1539212145
 GameObject:
@@ -2413,7 +2484,7 @@ PrefabInstance:
     - target: {fileID: 874972278780748862, guid: c0447648ceb6b4aec808a1e4fe152861,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 874972278780748862, guid: c0447648ceb6b4aec808a1e4fe152861,
         type: 3}
@@ -2560,7 +2631,7 @@ PrefabInstance:
     - target: {fileID: 6619908566204948499, guid: 362dd3711d7144644beec9fcd22fb616,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6619908566204948499, guid: 362dd3711d7144644beec9fcd22fb616,
         type: 3}

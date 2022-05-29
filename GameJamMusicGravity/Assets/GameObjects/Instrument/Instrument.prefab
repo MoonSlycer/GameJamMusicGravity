@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6537bc0410616d04a8faa91596485af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashAudioClip: {fileID: 8300000, guid: 575900f6a4cf4c84ca82fe1023637868, type: 3}
+  crashAudioClip: {fileID: 0}
 --- !u!82 &7208374853816017421
 AudioSource:
   m_ObjectHideFlags: 0
