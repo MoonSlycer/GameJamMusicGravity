@@ -23,28 +23,28 @@ public class GravitySwap : MonoBehaviour
         {
             CurrentDirection = new Vector2(-gravitySize, 0f);
             playerAnimator.SetBool("Gravity Swap", true);
-            cameraAnimator.SetBool("Gravity Swap", true);
+            cameraAnimator.Play("Camera_Grav", 0, 0);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             CurrentDirection = new Vector2(gravitySize, 0f);
             playerAnimator.SetBool("Gravity Swap", true);
-            cameraAnimator.SetBool("Gravity Swap", true);
+            cameraAnimator.Play("Camera_Grav", 0, 0);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             CurrentDirection = new Vector2(0f, gravitySize);
             playerAnimator.SetBool("Gravity Swap", true);
-            cameraAnimator.SetBool("Gravity Swap", true);
+            cameraAnimator.Play("Camera_Grav", 0, 0);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             CurrentDirection = new Vector2(0f, -gravitySize);
             playerAnimator.SetBool("Gravity Swap", true);
-            cameraAnimator.SetBool("Gravity Swap", true);
+            cameraAnimator.Play("Camera_Grav", 0, 0);
         }
 
         Physics2D.gravity = CurrentDirection;
