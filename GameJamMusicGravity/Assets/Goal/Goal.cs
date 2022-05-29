@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Goal!");
             Destroy(player);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
         }
     }
 }
