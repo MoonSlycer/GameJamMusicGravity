@@ -722,8 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravitySize: 80
-  playerAnimator: {fileID: 303621507}
-  cameraAnimator: {fileID: 519420030}
+  characterAnimator: {fileID: 303621507}
 --- !u!95 &303621507
 Animator:
   serializedVersion: 4
