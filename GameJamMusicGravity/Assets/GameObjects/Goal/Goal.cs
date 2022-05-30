@@ -14,6 +14,8 @@ public class Goal : MonoBehaviour
     private float onTouchCameraOrthographicSize;
     private float animationZoomAmt = .1f;
 
+    private bool bHasInstrument = false;
+
     void Start()
     {
         //This gets the Main Camera from the Scene
@@ -22,11 +24,23 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject == InstrumentSpawner.currentInstrument)
+        {
+            bHasInstrument = true;
+        }
+
+        if (other.gameObject.tag == "Player")
         {
             onTouchCameraLoc = m_MainCamera.transform.position;
             onTouchCameraOrthographicSize = m_MainCamera.orthographicSize;
             enteredBlackhole = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == InstrumentSpawner.currentInstrument)
+        {
+            bHasInstrument = false;
         }
     }
 
@@ -36,24 +50,31 @@ public class Goal : MonoBehaviour
     {
         if (enteredBlackhole)  // if character touched the black hole
         {
-            if (zoomAnimationCurrentTime < zoomAnimationDuration)  //  if the animation isn't finished yet
+            if (bHasInstrument || InstrumentSpawner.currentInstrument == null) // if the character has the instrument (or if there is no instrument)
             {
-                zoomAnimationCurrentTime += Time.deltaTime;
+                if (zoomAnimationCurrentTime < zoomAnimationDuration)  //  if the animation isn't finished yet
+                {
+                    zoomAnimationCurrentTime += Time.deltaTime;
 
-                float interpolationRatio = (float)(zoomAnimationCurrentTime / zoomAnimationDuration);
-                interpolationRatio = Mathf.Pow(interpolationRatio, 2);
-                Debug.Log(interpolationRatio);
-                m_MainCamera.transform.position = Vector3.Lerp(onTouchCameraLoc, gameObject.transform.position, interpolationRatio);
-                m_MainCamera.transform.position = new Vector3(m_MainCamera.transform.position.x, m_MainCamera.transform.position.y, -1); // ensure the camera doesn't clip through the objects (dont interpolate the z)
-                m_MainCamera.orthographicSize = Mathf.Lerp(onTouchCameraOrthographicSize, animationZoomAmt, interpolationRatio);
+                    float interpolationRatio = (float)(zoomAnimationCurrentTime / zoomAnimationDuration);
+                    interpolationRatio = Mathf.Pow(interpolationRatio, 2);
+                    Debug.Log(interpolationRatio);
+                    m_MainCamera.transform.position = Vector3.Lerp(onTouchCameraLoc, gameObject.transform.position, interpolationRatio);
+                    m_MainCamera.transform.position = new Vector3(m_MainCamera.transform.position.x, m_MainCamera.transform.position.y, -1); // ensure the camera doesn't clip through the objects (dont interpolate the z)
+                    m_MainCamera.orthographicSize = Mathf.Lerp(onTouchCameraOrthographicSize, animationZoomAmt, interpolationRatio);
 
+                }
+                else
+                {
+                    Debug.Log("Goal!");
+                    // Retrieve the index of the scene in the project's build settings.
+                    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                    SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
+                }
             }
             else
             {
-                Debug.Log("Goal!");
-                // Retrieve the index of the scene in the project's build settings.
-                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
+                Debug.Log("Need the instrument to complete the level");
             }
         }
     }
