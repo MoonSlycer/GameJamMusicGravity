@@ -19,6 +19,8 @@ public class GravitySwap : MonoBehaviour
 
     void Awake()
     {
+        bDisabled = false;
+
         cameraAnimator = GameObject.FindWithTag("MainCamera").GetComponent<Animator>();
 
         Physics2D.gravity = new Vector2(0f, 0f);
