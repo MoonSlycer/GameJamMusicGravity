@@ -82,7 +82,7 @@ PrefabInstance:
         type: 3}
       propertyPath: crashAudioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a9d81263daabb0b4ba3700532d4dc258, type: 3}
+      objectReference: {fileID: 8300000, guid: 4da4c02ab5b38a54cb92adf6d1d0b7e6, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce0fa910a6a1f124eae2a25c3e2960fc, type: 3}
