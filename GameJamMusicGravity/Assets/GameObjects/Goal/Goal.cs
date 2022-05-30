@@ -35,6 +35,7 @@ public class Goal : MonoBehaviour
         if (other.gameObject == InstrumentSpawner.currentInstrument)
         {
             bHasInstrument = true;
+            messageObject.SetActive(false);
         }
 
         if (other.gameObject.tag == "Player")
