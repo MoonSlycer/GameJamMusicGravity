@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class InstrumentSpawner : MonoBehaviour
 {
+    /** List of random instruments to spawn */
     public List<GameObject> instrumentPrefabs;
 
+    /** Static reference to the current instrument */
+    static public GameObject currentInstrument = null;
+
+    // Used to keep track of what we have already spawned
     static private List<GameObject> usedPrefabs = new List<GameObject>();
 
     public void Start()
@@ -33,7 +38,7 @@ public class InstrumentSpawner : MonoBehaviour
             GameObject randomPrefab = availablePrefabs[Random.Range(0, availablePrefabs.Count)];
             usedPrefabs.Add(randomPrefab);
 
-            Instantiate(randomPrefab, transform.position, Quaternion.identity);
+            currentInstrument = Instantiate(randomPrefab, transform.position, Quaternion.identity);
         }
     }
 }
