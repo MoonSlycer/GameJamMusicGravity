@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6619908566204948497}
   - component: {fileID: 7120311046278635804}
   - component: {fileID: 5048157215432139205}
+  - component: {fileID: 5271832329493139379}
   m_Layer: 0
   m_Name: Enemy _(
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6619908566204948496
 SpriteRenderer:
@@ -120,7 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2643d329a2a3549eca77ca614e6394c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8931793471488781780, guid: 8ddfea92a3b534238b59a52f24e93429, type: 3}
 --- !u!60 &5048157215432139205
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -155,3 +155,21 @@ PolygonCollider2D:
       - {x: 0.105, y: 0.07}
       - {x: 0.065, y: 0.11}
   m_UseDelaunayMesh: 0
+--- !u!114 &5271832329493139379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619908566204948503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ecb4b0debae014e8d43758dd6e2dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagOfObjectToEnter: Player
+  animationDuration: 0.5
+  animationZoomAmt: 3
+  durationToWaitAfterAnimation: 5
+  changeSceneByNextIndex: 0
+  newSceneString: GameOver
