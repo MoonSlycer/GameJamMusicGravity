@@ -41,4 +41,9 @@ public class InstrumentSpawner : MonoBehaviour
             currentInstrument = Instantiate(randomPrefab, transform.position, Quaternion.identity);
         }
     }
+
+    static public void ResetInstrumentTracking()
+    {
+        usedPrefabs.Clear();
+    }
 }
