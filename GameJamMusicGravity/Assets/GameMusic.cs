@@ -9,8 +9,13 @@ public class GameMusic : MonoBehaviour
         GameObject[] musicObjs = GameObject.FindGameObjectsWithTag("MusicPlayer");
         if (musicObjs.Length > 1)
         {
-
-            Destroy(musicObjs[0]);
+            foreach (var item in musicObjs)
+            {
+                if (item != this.gameObject)
+                {
+                    Destroy(item);
+                }
+            }
         }
     }
 
