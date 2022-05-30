@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
         {
             Destroy(other.gameObject);
 
+            InstrumentSpawner.ResetInstrumentTracking();
+
             GameObject gameMusic = GameObject.FindGameObjectWithTag("MusicPlayer");
             Destroy(gameMusic);
 
