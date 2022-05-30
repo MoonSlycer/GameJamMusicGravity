@@ -37,6 +37,16 @@ public class ZoomInOnObject : MonoBehaviour
             overlapped = true;
         }
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == tagOfObjectToEnter)
+        {
+            onTouchCameraLoc = m_MainCamera.transform.position;
+            onTouchCameraOrthographicSize = m_MainCamera.orthographicSize;
+
+            overlapped = true;
+        }
+    }
 
     public bool changeSceneByNextIndex = false;
     public string newSceneString = "";
