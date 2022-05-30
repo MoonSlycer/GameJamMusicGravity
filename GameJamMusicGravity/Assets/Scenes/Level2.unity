@@ -891,6 +891,11 @@ PrefabInstance:
       propertyPath: m_UseDelaunayMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5271832329493139379, guid: 362dd3711d7144644beec9fcd22fb616,
+        type: 3}
+      propertyPath: durationToWaitAfterAnimation
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6619908566204948499, guid: 362dd3711d7144644beec9fcd22fb616,
         type: 3}
       propertyPath: m_RootOrder
