@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameWon : MonoBehaviour
+public class GameWin : MonoBehaviour
 {
     void Start()
     {
