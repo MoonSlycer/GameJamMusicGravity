@@ -16,6 +16,14 @@ public class Goal : MonoBehaviour
 
     private bool bHasInstrument = false;
 
+    private GameObject messageObject = null;
+
+
+    void Awake()
+    {
+        messageObject = transform.Find("Message").gameObject;
+    }
+
     void Start()
     {
         //This gets the Main Camera from the Scene
@@ -38,6 +46,12 @@ public class Goal : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Player")
+        {
+            enteredBlackhole = false;
+            messageObject.SetActive(false);
+        }
+
         if (other.gameObject == InstrumentSpawner.currentInstrument)
         {
             bHasInstrument = false;
@@ -74,7 +88,7 @@ public class Goal : MonoBehaviour
             }
             else
             {
-                Debug.Log("Need the instrument to complete the level");
+                messageObject.SetActive(true);
             }
         }
     }
