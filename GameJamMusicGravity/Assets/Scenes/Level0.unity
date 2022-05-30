@@ -1361,7 +1361,7 @@ GameObject:
   - component: {fileID: 756864057}
   - component: {fileID: 756864056}
   - component: {fileID: 756864055}
-  - component: {fileID: 756864058}
+  - component: {fileID: 756864059}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -1452,7 +1452,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &756864058
+--- !u!114 &756864059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1461,11 +1461,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 756864054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcace490929c4a6e8d3eb70bc221052, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ecb4b0debae014e8d43758dd6e2dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomAnimationDuration: 0.5
-  enteredBlackhole: 0
+  tagOfObjectToEnter: Player
+  animationDuration: 0.5
+  animationZoomAmt: 0.01
+  durationToWaitAfterAnimation: 0
+  changeSceneByNextIndex: 1
+  newSceneString: 
 --- !u!1001 &762238117
 PrefabInstance:
   m_ObjectHideFlags: 0
