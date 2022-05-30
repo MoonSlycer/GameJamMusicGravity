@@ -11,11 +11,12 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
+
+            GameObject gameMusic = GameObject.FindGameObjectWithTag("MusicPlayer");
+            Destroy(gameMusic);
         }
 
-        GameObject gameMusic = GameObject.FindGameObjectWithTag("MusicPlayer");
 
-        Destroy(gameMusic);
 
 
         //GameMusic gameMusicScript = gameMusic.GetComponent<GameMusic>();
