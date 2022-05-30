@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GameMusic : MonoBehaviour
 {
+    void Start()
+    {
+        GameObject[] musicObjs = GameObject.FindGameObjectsWithTag("MusicPlayer");
+        if (musicObjs.Length > 1)
+        {
+
+            Destroy(musicObjs[0]);
+        }
+    }
+
     public void StopAllTracks()
     {
         AudioSource[] audioSources = GetComponents<AudioSource>();
