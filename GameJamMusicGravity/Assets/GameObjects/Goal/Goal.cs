@@ -70,7 +70,11 @@ public class Goal : MonoBehaviour
                     // Retrieve the index of the scene in the project's build settings.
                     int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
-                } 
+                }
+            }
+            else
+            {
+                Debug.Log("Need the instrument to complete the level");
             }
         }
     }

@@ -47,3 +47,5 @@ MonoBehaviour:
   instrumentPrefabs:
   - {fileID: 7070765729282052175, guid: b8b77e59b2a35204b933c259047b522f, type: 3}
   - {fileID: 4918199689708396925, guid: 8e88f22d1aff2ee48b919ae3d3ec502c, type: 3}
+  - {fileID: 5716794192267932287, guid: 52bf99ed3e4e1ee4baab0e7a25b20a0d, type: 3}
+  - {fileID: 5800122715862292083, guid: a780a04544d16964b9f0ae1ad0488fdc, type: 3}
