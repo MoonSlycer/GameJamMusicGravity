@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagOfObjectToEnter: Player
-  animationDuration: 0.5
+  animationDuration: 0
   animationZoomAmt: 3
-  durationToWaitAfterAnimation: 5
+  durationToWaitAfterAnimation: 4
   changeSceneByNextIndex: 0
   newSceneString: GameOver
